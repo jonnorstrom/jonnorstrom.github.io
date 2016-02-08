@@ -3,15 +3,16 @@
     <title>Jon's Dev</title>
     <link rel="stylesheet" type="text/css" href="../stylesheets/default.css"/>
     <link rel="stylesheet" type="text/css" href="../stylesheets/blog-template.css"/>
-    <link href='https://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog-index.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'/>
   </head>
   <body>
     <nav>
       <ul>
           <span class="left">
             <li><a href="../index.html">Home</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="blog-index.html">Blog</a></li>
           </span>
           <span class="right">
             <li><a href="#">Projects</a></li>
@@ -19,36 +20,34 @@
           </span>
       </ul>
     </nav>
+      <img class="jumbotron" src="../imgs/typewriter.jpg"/>
     <section>
-      <img src="#"/>
-      <h1>Blog Name (global)</h1>
+      <h1>A Collection</h1>
     </section>
     <main>
+      <div class="library-title">
+        <h3>Library</h3>
+      </div>
       <aside>
         <img src="#" alt="GitHub">
         <img src="#" alt="Facebook">
         <img src="#" alt="LinkedIn">
       </aside>
-      <div class="library-title">
-        <h3>Library</h3>
-      </div>
-      <article>
-        <p>Welcome to my blog, [global name]. This is where the description of my blog will go.</p>
-      </article>
-      <secion class="blog-list">
-        <div class="blog-entry">
-          <a href="git.html"><div class="blog-title">
-            <h4>Git In or Get Out</h4>
-            <h5>January 21st</h5>
-          </div>
-          <div class="blog-content">
-            <p>Have you heard of Git? And what is version control?</p>
-          </div></a>
+      <span class="blog-list">
+        <div class="blog-title">
+          <a href="css-concepts.html">
+          <h4>CSS Concepts</h4>
+          <h5>Feburary 7th</h5></a>
         </div>
-      </section>
+        <div class="blog-title">
+          <a href="git.html">
+          <h4>Git In or Get Out</h4>
+          <h5>January 23rd</h5></a>
+        </div>
+      </span>
     </main>
     <footer>
-      <p>My name, copyright, stuff like that</p>
+      <p>&copy Jon Norstrom, 2016</p>
     </footer>
   </body>
 </html>

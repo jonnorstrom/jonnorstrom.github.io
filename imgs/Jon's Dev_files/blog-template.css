@@ -1,0 +1,83 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+nav {
+  top: 0;
+  padding-top: 0;
+  margin-top: 0;
+  position: static;
+}
+
+section {
+  position: relative;
+  display: inline-block;
+  margin-left: 15%;
+  width: 40%;
+  margin-top: 0px;
+
+}
+
+h1 {
+  font-family: 'Josefin Slab', serif;
+  font-weight: 900;
+  margin-bottom: 2px;
+}
+
+h3  {
+  font-family: 'Josefin Slab', serif;
+  font-style: italic;
+  position: relative;
+  margin-top: 2px;
+  left: 5px;
+}
+
+section p {
+  font-family: 'Arvo', serif;
+  font-weight: 100;
+}
+
+aside {
+  margin-right: 30px;
+  float: right;
+}
+
+.links {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+aside img {
+  width: 60px;
+  height: 60px;
+  display: inline;
+  margin-right: 10px;
+  margin-left: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+h4 {
+  font-size: 25px;
+  border-top: 1px solid #a5a5a5;
+  border-bottom: 1px solid #a5a5a5;
+  margin-top: 0px;
+  padding-top: 3px;
+  text-align: center;
+  margin-bottom: 2px;
+  font-family: "Josefin Slab", serif;
+}
+
+h5 {
+  font-size: 18px;
+  margin-bottom: 2px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+h6 {
+  font-size: 14px;
+  margin-top: 2px;
+  text-align: center;
+}

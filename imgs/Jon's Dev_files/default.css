@@ -1,0 +1,55 @@
+html {
+  min-width: 650px
+}
+body {
+  margin: 0;
+}
+
+nav {
+  background-color: #E8E8E8;
+  top: 0;
+  height: 30px;
+  border-bottom: 1px solid #a5a5a5;
+}
+
+nav li {
+  display: inline;
+  margin-right: 7px;
+  margin-left: 7px;
+}
+
+ul {
+  padding-top: 5px;
+}
+
+nav a:hover {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #3C3C3C;
+  font-family: "Arvo", sans-serif;
+}
+
+.left {
+  float: left;
+  margin-left: 20px;
+}
+
+.right {
+  float: right;
+  margin-right: 20px;
+}
+
+.jumbotron {
+  width: 100%;
+  z-index: 0;
+  display: inline;
+}
+
+footer {
+  bottom: 0px;
+  text-align: center;
+  clear: both;
+}
