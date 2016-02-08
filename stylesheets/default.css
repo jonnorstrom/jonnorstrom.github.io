@@ -7,7 +7,6 @@ nav {
   top: 0;
   height: 30px;
   border-bottom: 1px solid #a5a5a5;
-  top: 0;
 }
 
 nav li {
@@ -39,25 +38,24 @@ a {
 .jumbotron {
   width: 100%;
   z-index: 0;
+  display: inline;
 }
 
 section {
-  position: relative;
-  bottom: 325px;
+  z-index: 1;
+  margin-top: -160px;
+}
+/*section {
+  bottom: 100px;
   left: 50px;
   z-index: 1;
-  margin-bottom: 0px;
+  background-color: red;
 }
-
-h3 {
-  position: absolute;
-  top: 190px;
-}
+*/
 
 main {
   position: relative;
   background-color: #E8E8E8;
-  bottom: 105px;
   display: inline-block;
   width: 100%;
 }
@@ -70,7 +68,7 @@ main {
 
 article {
   position: absolute;
-  width: 600px;
+  width: 50%;
   display: inline-block;
 }
 
