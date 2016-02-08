@@ -1,3 +1,6 @@
+html {
+  min-width: 650px
+}
 body {
   margin: 0;
 }
@@ -19,10 +22,14 @@ ul {
   padding-top: 5px;
 }
 
+nav a:hover {
+  font-weight: bold;
+}
+
 a {
   text-decoration: none;
   color: #3C3C3C;
-  font-family: sans-serif;
+  font-family: "Arvo", sans-serif;
 }
 
 .left {
@@ -41,50 +48,8 @@ a {
   display: inline;
 }
 
-section {
-  z-index: 1;
-  margin-top: -160px;
-}
-/*section {
-  bottom: 100px;
-  left: 50px;
-  z-index: 1;
-  background-color: red;
-}
-*/
-
-main {
-  position: relative;
-  background-color: #E8E8E8;
-  display: inline-block;
-  width: 100%;
-}
-
-.portrait {
-  width: 200px;
-  height: 200px;
-  display: inline-block;
-}
-
-article {
-  position: absolute;
-  width: 50%;
-  display: inline-block;
-}
-
-aside {
-  float: right;
-}
-
-aside img {
-  display: block;
-  margin: 5px;
-}
-
 footer {
   bottom: 0px;
-}
-
-footer p {
   text-align: center;
+  clear: both;
 }

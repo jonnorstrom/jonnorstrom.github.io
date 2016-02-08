@@ -1,0 +1,71 @@
+section {
+  z-index: 1;
+  margin-top: -160px;
+  position: relative;
+  margin-bottom: 0px;
+  left: 195px;
+  padding-bottom: 0px;
+}
+
+h1 {
+  margin-bottom: 0px;
+  margin-top: 3px;
+  text-shadow:  0.5px 1px 4px rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 30px;
+  font-family: "Josefin Slab", serif;
+}
+
+h3 {
+  margin-top: 5px;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 40px;
+  padding-bottom: 3px;
+  margin-bottom: 3px;
+  font-family: "Josefin Slab", serif;
+  font-weight: bolder;
+}
+
+main {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.portrait {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  display: inline-block;
+  position: absolute;
+  bottom: 18px;
+  left: 15px;
+
+}
+
+article {
+  top: 75px;
+  left: 240px;
+  position: absolute;
+  width: 50%;
+  display: inline-block;
+}
+
+p {
+  font-family: "Arvo", serif;
+}
+
+aside {
+  display: inline-block;
+  float: right;
+  position: relative;
+  top: 75px;
+}
+
+aside img {
+  display: block;
+  margin: 5px;
+  height: 60px;
+  width: 60px;
+}

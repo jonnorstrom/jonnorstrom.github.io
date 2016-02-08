@@ -20,16 +20,27 @@ section {
 }
 
 h1 {
-  margin-bottom: 0px;
+  font-family: 'Josefin Slab', serif;
+  font-weight: 900;
+  margin-bottom: 2px;
 }
 
 h3  {
-  position: static;
-  margin-top: 0px;
+  font-family: 'Josefin Slab', serif;
+  font-style: italic;
+  position: relative;
+  margin-top: 2px;
+  left: 5px;
+}
+
+section p {
+  font-family: 'Arvo', serif;
+  font-weight: 100;
 }
 
 aside {
   margin-right: 30px;
+  float: right;
 }
 
 .links {
@@ -52,8 +63,10 @@ h4 {
   border-top: 1px solid #a5a5a5;
   border-bottom: 1px solid #a5a5a5;
   margin-top: 0px;
+  padding-top: 3px;
   text-align: center;
   margin-bottom: 2px;
+  font-family: "Josefin Slab", serif;
 }
 
 h5 {
@@ -67,8 +80,4 @@ h6 {
   font-size: 14px;
   margin-top: 2px;
   text-align: center;
-}
-
-footer {
-  clear: right;
 }
