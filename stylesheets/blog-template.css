@@ -32,7 +32,10 @@ h3  {
   margin-top: 2px;
   left: 5px;
 }
-
+section li {
+  font-family: 'Arvo', serif;
+  font-weight: 50;
+}
 section p {
   font-family: 'Arvo', serif;
   font-weight: 100;
