@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html>
-
 <head>
   <title>"Projects | Jon N."</title>
   <link rel="stylesheet" type="text/css" href="../stylesheets/default.css"/>
   <link rel="stylesheet" type="text/css" href="../stylesheets/blog-template.css"/>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/cheat-sheet.css"/>
   <link href='https://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
 </head>
@@ -23,8 +21,8 @@
     </nav>
   <img class="jumbotron" src="../imgs/typewriter.jpg"/>
   <section>
-    <a href="cheat-sheet.html"><h1>CSS Cheat Sheet!</h1></a>
-    <p>Some handy things to remember when positiong elements on your HTML pages.</p>
+    <h1>CSS Positioning Techniques</h1>
+    <p>The first thing you must know about positioning a page is that all of your elements will fall just below the previous, all aligned to the top-left corner of the available space. Like this:<br><br><img id="default" src="../imgs/default-divs.png"/>This is good to know becuase it's good to know exactly where your divs will be placed form the start. But what if you're doing a navigation bar? You'll need them to sit next to each other. The easiest way is to set the <code>display: inline-block;</code> attribute for each of your <code>divs</code>. Once you do this, you'll get something like:<br><br><img id="inline-block" src="../imgs/inline-block.png"/><br>Now that's starting to look like a navbar! Next we need to center it. There are so many ways to do this but I prefer to make a container div around my four options, and then center that div. I've outlined my container div in red so you can see.<br><br><img id="nav" src="../imgs/nav.png"/>Getting the container centered is so very easy. You just set <code>width: [x]px; margin: auto;</code> where [x] is just how many pixels wide you want your nav bar to be.</p>
   </section>
   <aside>
     <div class="links">
