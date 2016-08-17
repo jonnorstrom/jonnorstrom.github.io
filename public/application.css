@@ -1,0 +1,14 @@
+:root {
+  --main-bg-color: rgb(252, 222, 92);
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
+
+.console {
+  margin-top: 100px;
+  text-align: center;
+  font-family: "Lucida Console", monospace;
+  font-size: 40px;
+}
