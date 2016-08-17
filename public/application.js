@@ -1,5 +1,6 @@
 var captionLength = 0;
-var caption = '';
+var captionOptions = ["Oh, hello there.", "Sorry my page is down.", "Should be back up soon! :)"]
+var index = 0
 
 function cursorAnimation() {
   $('#cursor').animate({
@@ -23,30 +24,38 @@ function erase() {
     }
 }
 
-function firstCaptionStart() {
-  caption = "Oh, hello there.";
+function showCaptions() {
+  caption = captionOptions[index];
   type();
-  setTimeout('erase()', 4000);
-  setTimeout('secondCaptionType()', 6000);
+  if (index < (captionOptions.length - 1)) {
+    index++
+    setTimeout('erase()', 4000);
+    setTimeout('showCaptions()', 6000)
+  } else {
+    setTimeout(function(){
+      $('#cursor').remove()
+    }, 1500)
+  }
 }
 
-function secondCaptionType() {
-  caption = "Sorry my page is down.";
-  type();
-  setTimeout('erase()', 4000);
-  setTimeout('lastCaptionEnd()', 6000);
-}
-
-function lastCaptionEnd() {
-  caption = "Should be back up soon! :)"
-  type();
-  setTimeout(function(){
-    $('#cursor').css('display', 'none')
-  }, 1500)
+function toggleMethods() {
+  $('.methods').toggle('slide');
+  if ($('.message a').html() == "Trying to get in touch?") {
+    $('.contact').animate({"margin-left": 200}, 400);
+    $('.message a').html("Reach out!");
+  } else {
+    $('.message a').html("Trying to get in touch?");
+    $('.contact').animate({'margin-left': 400}, 400);
+  }
 }
 
 $(document).ready(function(){
   setInterval('cursorAnimation()', 600);
   $caption = $('#caption');
-  setTimeout('firstCaptionStart()', 1000);
-})
+  setTimeout('showCaptions()', 1000);
+
+  $('.message a').on('click', function(e){
+    e.preventDefault()
+    toggleMethods();
+  })
+});
