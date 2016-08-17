@@ -1,5 +1,4 @@
 var captionLength = 0;
-var caption = '';
 
 function cursorAnimation() {
   $('#cursor').animate({
@@ -49,4 +48,4 @@ $(document).ready(function(){
   setInterval('cursorAnimation()', 600);
   $caption = $('#caption');
   setTimeout('firstCaptionStart()', 1000);
-})
+});
