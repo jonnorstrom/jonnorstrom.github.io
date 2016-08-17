@@ -1,15 +1,21 @@
-:root {
-  --main-bg-color: rgb(252, 222, 92);
+body {
+  background-color: rgb(252, 222, 92);
 }
 
-body {
-  background-color: var(--main-bg-color);
+.main-container {
+  margin: auto;
+  max-width: 1100px;
+  font-family: "Lucida Console", monospace;
+}
+
+.banner {
+  /*border: black 2px solid;*/
+  border-radius: 4px;
+  height: 150px;
 }
 
 .console {
-  margin-top: 100px;
   text-align: center;
-  font-family: "Lucida Console", monospace;
   font-size: 40px;
 }
 
@@ -19,13 +25,40 @@ body {
 }
 
 .ps {
-  margin-top: 70px;
+  /*margin-top: 70px;*/
   text-align: center;
-  font-family: "Lucida Console", monospace;
+  /*font-family: "Lucida Console", monospace;*/
   font-size: 20px;
 }
 
 .ps a {
   color: black;
   font-weight: bold;
+}
+
+.contact {
+  /*border: red 2px dotted;*/
+}
+
+.methods {
+  /*border: orange 2px dotted;*/
+  display: inline-block;
+}
+
+.methods p {
+  margin: 0;
+  padding: 0;
+}
+
+.message {
+  /*border: blue 2px dotted;*/
+  display: inline-block;
+}
+
+.message a {
+  color: black;
+}
+
+#twitter-link {
+  color: black;
 }

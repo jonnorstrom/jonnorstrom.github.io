@@ -44,8 +44,22 @@ function lastCaptionEnd() {
   }, 1500)
 }
 
+function showMethods() {
+  $('.methods').toggle('slide');
+  if ($('.message a').html() == "Trying to get in touch?") {
+    $('.message a').html("< CHECK IT OUT");
+  } else {
+    $('.message a').html("Trying to get in touch?");
+  }
+}
+
 $(document).ready(function(){
   setInterval('cursorAnimation()', 600);
   $caption = $('#caption');
   setTimeout('firstCaptionStart()', 1000);
+
+  $('.message a').on('click', function(e){
+    e.preventDefault()
+    showMethods();
+  })
 });
