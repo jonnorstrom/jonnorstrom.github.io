@@ -12,3 +12,20 @@ body {
   font-family: "Lucida Console", monospace;
   font-size: 40px;
 }
+
+.note {
+  max-width: 600px;
+  margin: auto;
+}
+
+.ps {
+  margin-top: 70px;
+  text-align: center;
+  font-family: "Lucida Console", monospace;
+  font-size: 20px;
+}
+
+.ps a {
+  color: black;
+  font-weight: bold;
+}
