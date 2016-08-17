@@ -47,7 +47,7 @@ function lastCaptionEnd() {
 function showMethods() {
   $('.methods').toggle('slide');
   if ($('.message a').html() == "Trying to get in touch?") {
-    $('.message a').html("< CHECK IT OUT");
+    $('.message a').html("CHECK IT OUT");
   } else {
     $('.message a').html("Trying to get in touch?");
   }
