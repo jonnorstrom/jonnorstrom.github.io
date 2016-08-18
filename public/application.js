@@ -70,12 +70,12 @@ function getRgbIndex() {
 }
 
 function raveTime(index) {
-  $('body').animate({"background-color": rgbOptions[index]}, 50);
+  $('body').animate({"background-color": rgbOptions[index]}, 40);
   index++
   if (index == rgbOptions.length) {
     index = 0;
   }
-  setTimeout('raveTime('+index+')', 100);
+  setTimeout('raveTime('+index+')', 70);
 }
 
 $(document).ready(function(){
