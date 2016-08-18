@@ -1,6 +1,8 @@
 var captionLength = 0;
-var captionOptions = ["Oh, hello there.", "Sorry my page is down.", "Should be back up soon! :)"]
-var index = 0
+var captionOptions = ["Oh, hello there.", "So this is my page.", "Hope you get what you need :)"]
+var index = 0;
+var rgbOptions = ["rgb(77, 222, 171)", "rgb(61, 183, 88)", "rgb(230, 79, 59)", "rgb(222, 77, 99)", "rgb(211, 188, 180)", "rgb(255, 255, 255)", "rgb(255, 220, 90)"]
+
 
 function cursorAnimation() {
   $('#cursor').animate({
@@ -49,13 +51,54 @@ function toggleMethods() {
   }
 }
 
+function checkLinkId() {
+  if ($('.color-change p').attr('id') != null) {
+    var index = getRgbIndex()
+  } else {
+    $('.color-change p').attr('id', '0')
+    var index = 0
+  }
+  return index
+}
+
+function getRgbIndex() {
+  var index = parseInt($('.color-change p').attr('id')) + 1
+  if (index == rgbOptions.length) {
+    index = 0;
+  }
+  return index
+}
+
+function raveTime(index) {
+  $('body').animate({"background-color": rgbOptions[index]}, 50);
+  index++
+  if (index == rgbOptions.length) {
+    index = 0;
+  }
+  setTimeout('raveTime('+index+')', 100);
+}
+
 $(document).ready(function(){
   setInterval('cursorAnimation()', 600);
   $caption = $('#caption');
   setTimeout('showCaptions()', 1000);
 
-  $('.message a').on('click', function(e){
+  $('.message a').on('click', function(e) {
     e.preventDefault()
     toggleMethods();
+  })
+
+  $('.color-change p').on('click', function(e) {
+    e.preventDefault();
+    var i = checkLinkId();
+    $(this).attr('id', i.toString());
+    $('body').animate({"background-color": rgbOptions[i]})
+  })
+
+  $('.rave').on('click', function(e){
+    e.preventDefault();
+    var i = checkLinkId();
+    console.log(i)
+    raveTime(i);
   })
 });
