@@ -43,11 +43,11 @@ function showCaptions() {
 function toggleMethods() {
   $('.methods').toggle('slide');
   if ($('.message a').html() == "Trying to get in touch?") {
-    $('.contact').animate({"margin-left": 200}, 400);
+    // $('.contact').animate({"margin-left": 200}, 400);
     $('.message a').html("Reach out!");
   } else {
     $('.message a').html("Trying to get in touch?");
-    $('.contact').animate({'margin-left': 400}, 400);
+    // $('.contact').animate({'margin-left': 400}, 400);
   }
 }
 

@@ -22,26 +22,11 @@ body {
 }
 
 .contact {
-  margin-left: 400px;
-}
-
-.projects {
-  margin-left: 380px;
-}
-
-.ps {
-  /*margin-top: 70px;*/
+  /*margin-left: 400px;*/
   text-align: center;
-  /*font-family: "Lucida Console", monospace;*/
-  font-size: 20px;
 }
 
-.ps a {
-  color: black;
-  font-weight: bold;
-}
-
-.methods, .links {
+.methods {
   /*border: orange 2px dotted;*/
   display: inline-block;
 }
@@ -51,12 +36,12 @@ body {
   padding: 0;
 }
 
-.message, .project-message {
+.message {
   /*border: blue 2px dotted;*/
   display: inline-block;
 }
 
-.message a, .project-message a {
+.message a {
   color: black;
 }
 
