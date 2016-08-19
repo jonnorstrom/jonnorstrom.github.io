@@ -1,11 +1,13 @@
 body {
-  background-color: rgb(252, 222, 92);
+  /*background-color: rgb(252, 222, 92);*/
+  background-color: rgb(255, 220, 90);
+  font-family: "Lucida Console", monospace;
+  /*height: 700px;*/
 }
 
 .main-container {
   margin: auto;
   max-width: 1100px;
-  font-family: "Lucida Console", monospace;
 }
 
 .banner {
@@ -21,7 +23,11 @@ body {
 }
 
 .contact {
-  margin-left: 400px;  
+  margin-left: 400px;
+}
+
+.projects {
+  margin-left: 380px;
 }
 
 .ps {
@@ -36,7 +42,7 @@ body {
   font-weight: bold;
 }
 
-.methods {
+.methods, .links {
   /*border: orange 2px dotted;*/
   display: inline-block;
 }
@@ -46,15 +52,31 @@ body {
   padding: 0;
 }
 
-.message {
+.message, .project-message {
   /*border: blue 2px dotted;*/
   display: inline-block;
 }
 
-.message a {
+.message a, .project-message a {
   color: black;
 }
 
 #twitter-link {
   color: black;
+}
+
+.color-change {
+  text-align: center;
+}
+
+.color-change a {
+  color: black;
+}
+
+footer {
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding-bottom: 15px;
 }
