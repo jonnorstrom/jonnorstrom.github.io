@@ -63,4 +63,10 @@ footer {
   width: 100%;
   bottom: 0;
   padding-bottom: 15px;
+  background-color: rgb(255, 220, 90);
+}
+
+footer a {
+  font-weight: bold;
+  color: black;
 }
