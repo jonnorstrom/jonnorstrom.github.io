@@ -78,6 +78,11 @@ function raveTime(index) {
   setTimeout('raveTime('+index+')', 70);
 }
 
+function play(){
+  var audio = document.getElementById("audio");
+  audio.play();
+}
+
 $(document).ready(function(){
   setInterval('cursorAnimation()', 600);
   $caption = $('#caption');
@@ -96,9 +101,12 @@ $(document).ready(function(){
   })
 
   $('.rave').on('click', function(e){
-    e.preventDefault();
     var i = checkLinkId();
-    console.log(i)
-    raveTime(i);
+    if ($(this).html() == "Party Time") {
+      e.preventDefault();
+      raveTime(i);
+      $(this).html("Boring Time");
+      play();
+    }
   })
 });
