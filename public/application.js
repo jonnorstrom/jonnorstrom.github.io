@@ -43,11 +43,9 @@ function showCaptions() {
 function toggleMethods() {
   $('.methods').toggle('slide');
   if ($('.message a').html() == "Trying to get in touch?") {
-    $('.contact').animate({"margin-left": 200}, 400);
     $('.message a').html("Reach out!");
   } else {
     $('.message a').html("Trying to get in touch?");
-    $('.contact').animate({'margin-left': 400}, 400);
   }
 }
 
@@ -71,6 +69,7 @@ function getRgbIndex() {
 
 function raveTime(index) {
   $('body').animate({"background-color": rgbOptions[index]}, 40);
+  $('footer').animate({"background-color": rgbOptions[index]}, 40);
   index++
   if (index == rgbOptions.length) {
     index = 0;
@@ -98,6 +97,7 @@ $(document).ready(function(){
     var i = checkLinkId();
     $(this).attr('id', i.toString());
     $('body').animate({"background-color": rgbOptions[i]})
+    $('footer').animate({"background-color": rgbOptions[i]})
   })
 
   $('.rave').on('click', function(e){
