@@ -92,7 +92,7 @@ $(document).ready(function(){
     toggleMethods();
   })
 
-  $('.color-change p').on('click', function(e) {
+  $('.color-change p.background').on('click', function(e) {
     e.preventDefault();
     var i = checkLinkId();
     $(this).attr('id', i.toString());
@@ -108,9 +108,5 @@ $(document).ready(function(){
       $(this).html("Boring Time");
       play();
     }
-  })
-
-  $("p.rickroll").on('click', function(e){
-    
   })
 });
