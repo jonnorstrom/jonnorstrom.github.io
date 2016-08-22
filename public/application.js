@@ -50,17 +50,17 @@ function toggleMethods() {
 }
 
 function checkLinkId() {
-  if ($('.color-change p').attr('id') != null) {
+  if ($('.color-change p.background').attr('id') != null) {
     var index = getRgbIndex()
   } else {
-    $('.color-change p').attr('id', '0')
+    $('.color-change p.background').attr('id', '0')
     var index = 0
   }
   return index
 }
 
 function getRgbIndex() {
-  var index = parseInt($('.color-change p').attr('id')) + 1
+  var index = parseInt($('.color-change p.background').attr('id')) + 1
   if (index == rgbOptions.length) {
     index = 0;
   }
@@ -95,6 +95,8 @@ $(document).ready(function(){
   $('.color-change p.background').on('click', function(e) {
     e.preventDefault();
     var i = checkLinkId();
+    console.log(i)
+    console.log(this)
     $(this).attr('id', i.toString());
     $('body').animate({"background-color": rgbOptions[i]})
     $('footer').animate({"background-color": rgbOptions[i]})
