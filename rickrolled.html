@@ -9,6 +9,7 @@
     <div id="player"></div>
     <!-- source at https://developers.google.com/youtube/iframe_api_reference-->
     <script type="text/javascript">
+    document.body.style.backgroundColor = "black";
     var tag = document.createElement('script');
 
     tag.src = "https://www.youtube.com/iframe_api";
@@ -20,8 +21,8 @@
     var player;
     function onYouTubeIframeAPIReady() {
       player = new YT.Player('player', {
-        height: '390',
-        width: '640',
+        height: document.documentElement.clientHeight,
+        width: document.documentElement.clientWidth,
         videoId: 'DLzxrzFCyOs',
         events: {
           'onReady': onPlayerReady,
