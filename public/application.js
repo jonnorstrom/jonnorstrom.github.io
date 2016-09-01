@@ -50,11 +50,6 @@ function showCaptions() {
 
 function toggleMethods() {
   $('.methods').toggle('slide');
-  if ($('.message a').html() == "Trying to get in touch?") {
-    $('.message a').html("Reach out!");
-  } else {
-    $('.message a').html("Trying to get in touch?");
-  }
 }
 
 function raveTime() {
