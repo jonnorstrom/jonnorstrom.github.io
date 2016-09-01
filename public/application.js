@@ -1,8 +1,15 @@
 var captionLength = 0;
 var captionOptions = ["Oh, hello there.", "So this is my page.", "Hope you get what you need :)"]
-var index = 0;
-var rgbOptions = ["rgb(61, 183, 88)", "rgb(230, 79, 59)", "rgb(222, 77, 99)", "rgb(211, 188, 180)", "rgb(255, 255, 255)", "rgb(255, 220, 90)", "rgb(77, 222, 171)"]
+var captionIndex = 0;
 
+var rgbOptions = ["rgb(61, 183, 88)", "rgb(230, 79, 59)", "rgb(222, 77, 99)", "rgb(211, 188, 180)", "rgb(255, 255, 255)", "rgb(255, 220, 90)", "rgb(77, 222, 171)"]
+var colorIndex = 0;
+
+function runCaptions() {
+  cursorAnimation();
+  $caption = $('#caption');
+  setTimeout('showCaptions()', 1000);
+}
 
 function cursorAnimation() {
   $('#cursor').animate({
@@ -10,27 +17,28 @@ function cursorAnimation() {
   }, 400).animate({
       opacity: 1
   }, 400);
+  setTimeout('cursorAnimation()')
 }
 
 function type() {
-    $caption.html(caption.substr(0, captionLength++));
-    if(captionLength < caption.length+1) {
+    $caption.html(captionToType.substr(0, captionLength++));
+    if(captionLength < captionToType.length+1) {
         setTimeout('type()', 70);
     }
 }
 
 function erase() {
-    $caption.html(caption.substr(0, captionLength--));
+    $caption.html(captionToType.substr(0, captionLength--));
     if(captionLength >= 0) {
         setTimeout('erase()', 50);
     }
 }
 
 function showCaptions() {
-  caption = captionOptions[index];
+  captionToType = captionOptions[captionIndex];
   type();
-  if (index < (captionOptions.length - 1)) {
-    index++
+  if (captionIndex < (captionOptions.length - 1)) {
+    captionIndex++
     setTimeout('erase()', 4000);
     setTimeout('showCaptions()', 6000)
   } else {
@@ -49,43 +57,21 @@ function toggleMethods() {
   }
 }
 
-function checkLinkId() {
-  if ($('.color-change p.background').attr('id') != null) {
-    var index = getRgbIndex()
-  } else {
-    $('.color-change p.background').attr('id', '0')
-    var index = 0
+function raveTime() {
+  $('html').animate({"background-color": rgbOptions[colorIndex]}, 60);
+  colorIndex++
+  if (colorIndex == rgbOptions.length) {
+    colorIndex = 0;
   }
-  return index
-}
-
-function getRgbIndex() {
-  var index = parseInt($('.color-change p.background').attr('id')) + 1
-  if (index == rgbOptions.length) {
-    index = 0;
-  }
-  return index
-}
-
-function raveTime(index) {
-  $('body').animate({"background-color": rgbOptions[index]}, 40);
-  $('footer').animate({"background-color": rgbOptions[index]}, 40);
-  index++
-  if (index == rgbOptions.length) {
-    index = 0;
-  }
-  setTimeout('raveTime('+index+')', 70);
+  setTimeout('raveTime()', 100);
 }
 
 function play(){
-  var audio = document.getElementById("audio");
-  audio.play();
+  document.getElementById("audio").play();
 }
 
 $(document).ready(function(){
-  setInterval('cursorAnimation()', 600);
-  $caption = $('#caption');
-  setTimeout('showCaptions()', 1000);
+  runCaptions();
 
   $('.message a').on('click', function(e) {
     e.preventDefault()
@@ -94,19 +80,14 @@ $(document).ready(function(){
 
   $('.color-change p.background').on('click', function(e) {
     e.preventDefault();
-    var i = checkLinkId();
-    console.log(i)
-    console.log(this)
-    $(this).attr('id', i.toString());
-    $('body').animate({"background-color": rgbOptions[i]})
-    $('footer').animate({"background-color": rgbOptions[i]})
+    $('html').animate({"background-color": rgbOptions[colorIndex]})
+    colorIndex++
   })
 
   $('.rave').on('click', function(e){
-    var i = checkLinkId();
     if ($(this).html() == "Party Time") {
       e.preventDefault();
-      raveTime(i);
+      raveTime(colorIndex);
       $(this).html("Boring Time");
       play();
     }

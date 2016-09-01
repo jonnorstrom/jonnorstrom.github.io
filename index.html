@@ -17,25 +17,27 @@
       </div>
       <div class="contact">
         <div class="methods">
-          <p>[ <a id="twitter-link" href="https://twitter.com/jondnorstrom" target="_blank">@jondnorstrom</a>,   <a id="twitter-link" href="https://linkedin.com/in/norstromjonathan" target="_blank">LinkedIn</a>,   <a id="twitter-link" href="mailto:jon.norstrom@gmail.com?Subject=Sent%20from%20site" target="_top">jon.norstrom@gmail.com</a>  ]</p>
+          <p>[  <a class="twitter-link" href="https://codepen.io/jonnorstrom" target="_blank">CodePen</a>,   <a class="twitter-link" href="https://twitter.com/jondnorstrom" target="_blank">@jondnorstrom</a>,   <a class="twitter-link" href="https://linkedin.com/in/norstromjonathan" target="_blank">LinkedIn</a>   ]</p>
         </div>
         <div class="message">
-          <p><a href=''>Trying to get in touch?</a></p>
+          <p><a href=''>Me, on the web</a></p>
         </div>
       </div>
       <div class="color-change">
         <p class="background" ><a href=''>Don't like this background color?</a></p>
         <small>*<a class="rave" href='/'>Party Time</a>*</small>
-        <p style="font-size: 12px;" class="rickroll"><a href="rickrolled.html">don't click</a></p>
       </div>
     </div>
     <script type="text/javascript">
       $('.methods').hide();
+      $('span#year').text(new Date().getFullYear());
     </script>
     <script src="./public/application.js"></script>
     <audio id="audio" src="./public/sandstorm.mp3" ></audio>
     <footer>
-      <small>&lt;/&gt; by yours truly &copy; 2016 | </small>
+      <small>compose: <a id="email" href="mailto:jon.norstrom@gmail.com?Subject=Sent%20from%20site" target="_top">jon.norstrom@gmail.com</a></small></br>
+      <small><a class="rickroll" href="rickrolled.html">don't click</a></small>
+      <small>&lt;/&gt; by yours truly &copy; <span id="year">2016</span> | </small>
       <small>Hosted with &lt;3 by <a target="_blank" href="https://pages.github.com/">Github</a></small>
     </footer>
   </body>

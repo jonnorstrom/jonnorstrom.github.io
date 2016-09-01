@@ -1,4 +1,4 @@
-body {
+html {
   /*background-color: rgb(252, 222, 92);*/
   background-color: rgb(77, 222, 171);
   font-family: "Lucida Console", monospace;
@@ -46,7 +46,7 @@ body {
   color: black;
 }
 
-#twitter-link {
+.twitter-link {
   color: black;
 }
 
@@ -64,7 +64,10 @@ footer {
   width: 100%;
   bottom: 0;
   padding-bottom: 15px;
-  background-color: rgb(77, 222, 171);
+}
+
+footer #email {
+
 }
 
 footer a {
@@ -72,6 +75,20 @@ footer a {
   color: black;
 }
 
+
 .rickroll {
   color: black;
+  font-size: 12px;
+  position: absolute;
+  left: 4px;
+  font-weight: normal;
+
+}
+
+@media (max-width: 480px) {
+  .rickroll {
+    font-size: 12px;
+    position: absolute;
+    bottom: 5px;
+  }
 }
