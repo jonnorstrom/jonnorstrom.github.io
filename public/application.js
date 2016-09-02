@@ -75,6 +75,9 @@ $(document).ready(function(){
 
   $('.color-change p.background').on('click', function(e) {
     e.preventDefault();
+    if (colorIndex == rgbOptions.length) {
+      colorIndex = 0;
+    }
     $('html').animate({"background-color": rgbOptions[colorIndex]})
     colorIndex++
   })
