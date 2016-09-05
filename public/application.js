@@ -53,11 +53,11 @@ function toggleMethods() {
 }
 
 function raveTime() {
-  $('html').animate({"background-color": rgbOptions[colorIndex]}, 60);
-  colorIndex++
   if (colorIndex == rgbOptions.length) {
     colorIndex = 0;
   }
+  $('html').animate({"background-color": rgbOptions[colorIndex]}, 60);
+  colorIndex++
   setTimeout('raveTime()', 100);
 }
 
