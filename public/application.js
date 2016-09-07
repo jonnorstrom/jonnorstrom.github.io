@@ -52,15 +52,6 @@ function toggleMethods() {
   $('.methods').toggle('slide');
 }
 
-function switchDomText() {
-  var $domText = $('.rave').html();
-  if ($domText == "Boring Time") {
-    $('.rave').html('Party Time')
-  } else {
-    $('.rave').html('Boring Time')
-  }
-}
-
 function switchRaveState() {
   if (currentlyRaving) {
     currentlyRaving = false
@@ -88,35 +79,35 @@ function animateBackgroundColor(speed) {
 }
 
 function play() {
-  var audio = $("#audio")
-  // if (audio.paused) {
-    $("#audio").play();
-  // }
+  document.getElementById("audio").play();
 }
 
 function stopAndReset() {
-  var audio = $("#audio")
-  audio.stop();
+  var audio = document.getElementById("audio");
+  audio.pause();
   audio.currentTime = 0
 }
 
 $(function(){
   runCaptions();
 
-  $('.message a').on('click', function(e) {
-    e.preventDefault()
+  $('.message a').on('click', function() {
+    event.preventDefault()
     toggleMethods();
   })
 
-  $('.color-change p.background').on('click', function(e) {
-    e.preventDefault();
+  $('.color-change p.background').on('click', function() {
+    event.preventDefault();
     animateBackgroundColor(350)
   })
 
-  $('.rave').on('click', function(e){
-    e.preventDefault();
+  $('.rave').on('click', function(){
+    event.preventDefault();
+
+    $(this).siblings().removeClass('hidden');
+    $(this).addClass('hidden')
+
     switchRaveState();
-    switchDomText();
     checkRaveState();
   })
 });
