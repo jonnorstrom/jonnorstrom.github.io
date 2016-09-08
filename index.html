@@ -8,7 +8,6 @@
     <script src="./public/jquery-color-min.js"></script>
   </head>
   <body>
-
     <div class="main-container">
       <div class="banner">
         <p class="console">
@@ -30,7 +29,6 @@
     </div>
     <script type="text/javascript">
       $('.methods').hide();
-      $('span#year').text(new Date().getFullYear());
     </script>
     <script src="./public/application.js"></script>
     <audio id="audio" src="./public/sandstorm.mp3" ></audio>
@@ -39,6 +37,7 @@
       <small><a class="rickroll" href="rickrolled.html">don't click</a></small>
       <small>&lt;/&gt; by yours truly &copy; <span id="year">2016</span> | </small>
       <small>Hosted with &lt;3 by <a target="_blank" href="https://pages.github.com/">Github</a></small>
+      <script>$('span#year').text(new Date().getFullYear());</script>
     </footer>
   </body>
 </html>
