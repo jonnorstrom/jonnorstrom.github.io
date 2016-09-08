@@ -64,7 +64,7 @@ function switchRaveState() {
 function checkRaveState() {
   if (currentlyRaving) {
     animateBackgroundColor(70);
-    play();
+    play(); // doesn't re-instigate the play function if song is already playing.
     setTimeout('checkRaveState()', 100);
   } else {
     stopAndReset();
