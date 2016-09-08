@@ -63,7 +63,7 @@ function switchRaveState() {
 
 function checkRaveState() {
   if (currentlyRaving) {
-    animateBackgroundColor(60);
+    animateBackgroundColor(70);
     play();
     setTimeout('checkRaveState()', 100);
   } else {
@@ -72,9 +72,7 @@ function checkRaveState() {
 }
 
 function animateBackgroundColor(speed) {
-  if (colorIndex == rgbOptions.length) {
-    colorIndex = 0;
-  }
+  ((colorIndex == rgbOptions.length) ? colorIndex = 0 : null);
   $('html').animate({"background-color": rgbOptions[colorIndex]}, speed);
   colorIndex++
 }
