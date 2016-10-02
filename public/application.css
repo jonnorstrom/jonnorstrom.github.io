@@ -1,8 +1,6 @@
 html {
-  /*background-color: rgb(252, 222, 92);*/
   background-color: rgb(77, 222, 171);
   font-family: "Lucida Console", monospace;
-  /*height: 700px;*/
 }
 
 .main-container {
@@ -11,7 +9,6 @@ html {
 }
 
 .banner {
-  /*border: black 2px solid;*/
   margin-top: 60px;
   border-radius: 4px;
   height: 150px;
@@ -23,12 +20,10 @@ html {
 }
 
 .contact {
-  /*margin-left: 400px;*/
   text-align: center;
 }
 
 .methods {
-  /*border: orange 2px dotted;*/
   display: inline-block;
 }
 
@@ -38,7 +33,6 @@ html {
 }
 
 .message {
-  /*border: blue 2px dotted;*/
   display: inline-block;
 }
 
@@ -70,15 +64,10 @@ footer {
   padding-bottom: 15px;
 }
 
-footer #email {
-
-}
-
 footer a {
   font-weight: bold;
   color: black;
 }
-
 
 .rickroll {
   color: black;
