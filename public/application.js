@@ -1,10 +1,19 @@
 var captionLength = 0;
-var captionOptions = ["Oh, hello there.", "So this is my page.", "Hope you get what you need :)"]
+var captionOptions = ["Oh, hello there.", "So this is my page.", "Hope you get what you need :)", "Now, 'The Zen of Github':"]
 var captionIndex = 0;
 var rgbOptions = ["rgb(61, 183, 88)", "rgb(230, 79, 59)", "rgb(222, 77, 99)", "rgb(211, 188, 180)", "rgb(255, 255, 255)", "rgb(255, 220, 90)", "rgb(77, 222, 171)"]
 var colorIndex = 0;
 
 var currentlyRaving = false;
+
+
+function getZen() {
+  $.ajax({
+    url: "https://api.github.com/zen"
+  }).done(function(resp){
+    captionOptions.push(resp);
+  });
+}
 
 function runCaptions() {
   cursorAnimation();
@@ -39,6 +48,7 @@ function showCaptions() {
   captionToType = captionOptions[captionIndex];
   type();
   if (captionIndex < (captionOptions.length - 1)) {
+    getZen();
     captionIndex++
     setTimeout('erase()', 4000);
     setTimeout('showCaptions()', 6000)
